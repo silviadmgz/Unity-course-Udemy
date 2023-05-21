@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: New Question 3
   m_EditorClassIdentifier: 
   question: Where was she born?
+  answers:
+  - Not here
+  - Norway
+  - DR
+  - Santo Domingo
+  correctAnswerIndex: 3

@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: New Question 5
   m_EditorClassIdentifier: 
   question: What's her cat's name?
+  answers:
+  - Balder
+  - Baldur's Gate
+  - She doesn't have a cat
+  - Baldur
+  correctAnswerIndex: 3

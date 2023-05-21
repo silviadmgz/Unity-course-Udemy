@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: What is her favorite tea?
   answers:
-  - int num = 12;
-  - Int num = "12";
-  - Int num = 12;
-  - int num = "12";
-  correctAnswerIndex: 0
+  - Macha
+  - Matcha green tea
+  - Matcha
+  - Earl Gray
+  correctAnswerIndex: 2
