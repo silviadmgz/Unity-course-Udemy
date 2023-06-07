@@ -24,10 +24,16 @@ public class Quiz : MonoBehaviour
     [SerializeField] Image timerImage;
     Timer timer;
 
-    void Start()
+    [Header("ProgressBar")]
+    [SerializeField] Slider progressBar;
+
+    public bool isComplete;
+
+    void Awake()
     {
         timer = FindObjectOfType<Timer>();
-        // DisplayQuestion();
+        progressBar.maxValue = questions.Count;
+        progressBar.value = 0;
     }
 
     void Update() 
@@ -35,6 +41,7 @@ public class Quiz : MonoBehaviour
         timerImage.fillAmount = timer.fillFraction;
         if (timer.loadNextQuestion)
         {
+            
             hasAnsweredEarly = false;
             GetNextQuestion();
             timer.loadNextQuestion = false;
@@ -54,6 +61,12 @@ public class Quiz : MonoBehaviour
         DisplayAnswer(index);
         SetButtonState(false);
         timer.CancelTimer();
+        progressBar.value++;
+        
+        if (progressBar.value == progressBar.maxValue)
+        {
+            // isComplete = true;
+        }
     }
 
     void DisplayAnswer(int index)
@@ -82,10 +95,13 @@ public class Quiz : MonoBehaviour
             SetButtonState(true);
             SetDefaultButtonSprites();
             GetRandomQuestion();
-            DisplayQuestion();            
+            DisplayQuestion();
+            // progressBar.value++;
+        } else
+        {
+            isComplete = true;
         }
         
-
     }
 
     void GetRandomQuestion()
