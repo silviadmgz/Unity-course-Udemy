@@ -37,5 +37,13 @@ public class GameSession : MonoBehaviour
     void ResetGameSession()
     {
         SceneManager.LoadScene(0);
+        Destroy(gameObject);
+    }
+
+    void TakeLife()
+    {
+        playerLives --;
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
