@@ -24,7 +24,5 @@ public class CoinPickup : MonoBehaviour
         coinSound.PlayOneShot(coinPickupSFX);
         Destroy(gameObject);
         Debug.Log(coinsPickedUp);
-    }
-
-    
+    }    
 }
