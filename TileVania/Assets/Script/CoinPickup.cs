@@ -19,12 +19,14 @@ public class CoinPickup : MonoBehaviour
         {
             wasCollected = true;
             PickUpCoin();
-            FindObjectOfType<GameSession>().AddToScore(pointsForCoinPickup);
+            // FindObjectOfType<GameSession>().AddToScore(pointsForCoinPickup);
+            GameSession.instance.AddToScore(pointsForCoinPickup);
         }
     }
     
     void PickUpCoin()
     {
+        PlayerController.instance.sprite.color = Color.red;
         coinsPickedUp++;
         coinSound = GameObject.Find("SFX AudioSource").GetComponent<AudioSource>();
         coinSound.PlayOneShot(coinPickupSFX);
