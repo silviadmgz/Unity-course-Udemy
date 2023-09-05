@@ -5,13 +5,23 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {    
+    Vector2 rawInput;
+    [SerializeField] float moveSpeed = 5;
+    
     void Update()
     {
-        
+        PlayerMove();
+    }
+
+    void PlayerMove()
+    {
+        Vector3 delta = rawInput * moveSpeed * Time.deltaTime;
+        transform.position += delta;
     }
 
     void OnMove(InputValue value)
     {
-        value.Get<Vector2>();
+        rawInput = value.Get<Vector2>();
+        Debug.Log(rawInput);
     }
 }
