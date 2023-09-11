@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7418779243657008962}
   - component: {fileID: 6752002440017475980}
   - component: {fileID: 4732618782200719204}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd89ab16d6d50d24690672b37d1d19ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &2373856242239774028
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4829995183995648160}
   - component: {fileID: 2682268306141273286}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +256,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ee84caf9f4006824cb0f54047137227d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
