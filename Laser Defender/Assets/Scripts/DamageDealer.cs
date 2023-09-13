@@ -6,13 +6,6 @@ public class DamageDealer : MonoBehaviour
 {
     [SerializeField] int damage = 10;
 
-    // public static DamageDealer instance;
-
-    // void Awake() 
-    // {
-    //     instance = this;
-    // }
-
     public int GetDamage()
     {
         return damage;
