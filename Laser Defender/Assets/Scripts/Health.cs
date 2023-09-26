@@ -51,6 +51,9 @@ public class Health : MonoBehaviour
         if(!isPlayer)
         {
             ScoreKeeper.instance.ModifyScore(score);
+        } else
+        {
+            LevelManager.instance.LoadGameOver();
         }
         Destroy(gameObject);
     }
