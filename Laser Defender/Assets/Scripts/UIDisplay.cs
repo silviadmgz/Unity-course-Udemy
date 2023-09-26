@@ -6,16 +6,21 @@ using UnityEngine.UI;
 
 public class UIDisplay : MonoBehaviour
 {
+    [Header ("Health")]
+    [SerializeField] Slider healthSlider;
+    [SerializeField] Health playerHealth;
+
+    [Header ("Score")]
     [SerializeField] TextMeshProUGUI scoreText;
 
     void Start()
     {
-        
+        healthSlider.maxValue = Health.instance.GetHealth();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        healthSlider.value = playerHealth.GetHealth();
+        scoreText.text = ScoreKeeper.instance.CurrentScore().ToString("000000000");
     }
 }

@@ -292,7 +292,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bedc1e5d8a8b8b74380fc5e66dbd171f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -527,7 +527,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 291bd844fc8c5e44fb5de9e6d0485fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  healthSlider: {fileID: 1172081122}
+  playerHealth: {fileID: 7595353927562618767}
+  scoreText: {fileID: 1504048918}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,6 +1548,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a12d7c8a8ad91464d815a94de7b9845c, type: 3}
+--- !u!114 &7595353927562618767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4732618782200719204, guid: a12d7c8a8ad91464d815a94de7b9845c, type: 3}
+  m_PrefabInstance: {fileID: 7595353927562618766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd89ab16d6d50d24690672b37d1d19ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -11,6 +11,13 @@ public class Health : MonoBehaviour
     [SerializeField] ParticleSystem hitEffect;
     [SerializeField] bool applyCameraShake;
 
+    public static Health instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
     void OnTriggerEnter2D(Collider2D other) 
     {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
