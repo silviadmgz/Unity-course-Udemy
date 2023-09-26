@@ -17,6 +17,20 @@ public class AudioPlayer : MonoBehaviour
     void Awake() 
     {
         instance = this;
+        ManageSingleton();
+    }
+
+    void ManageSingleton()
+    {
+        int instanceCount = FindObjectsOfType(GetType()).Length;
+        if (instanceCount > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        } else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void PlayShootingClip()
