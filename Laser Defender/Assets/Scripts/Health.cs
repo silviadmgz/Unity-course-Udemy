@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Health : MonoBehaviour
 {
@@ -11,10 +12,18 @@ public class Health : MonoBehaviour
     [SerializeField] ParticleSystem hitEffect;
     [SerializeField] bool applyCameraShake;
 
+    ScoreKeeper scoreKeeper;
+
     public static Health instance;
 
     void Awake()
     {
+        instance = this;
+    }
+
+    void Start() 
+    {
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
         instance = this;
     }
 
@@ -50,7 +59,7 @@ public class Health : MonoBehaviour
     {
         if(!isPlayer)
         {
-            ScoreKeeper.instance.ModifyScore(score);
+            scoreKeeper.ModifyScore(score);
         } else
         {
             LevelManager.instance.LoadGameOver();

@@ -740,7 +740,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833342669}
   m_CullTransparentMesh: 1
---- !u!1001 &1067205298
+--- !u!1001 &923139122
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -750,7 +750,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3444832150821125854, guid: 2552b585009e6594fb1e1c39e24c0fc7, type: 3}
       propertyPath: m_Name
-      value: Score Keeper
+      value: ScoreKeeper
       objectReference: {fileID: 0}
     - target: {fileID: 7410843346075510987, guid: 2552b585009e6594fb1e1c39e24c0fc7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1675,4 +1675,4 @@ SceneRoots:
   - {fileID: 1655998569}
   - {fileID: 502906256}
   - {fileID: 585109035902741481}
-  - {fileID: 1067205298}
+  - {fileID: 923139122}

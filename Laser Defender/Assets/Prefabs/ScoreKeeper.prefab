@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7410843346075510987}
   - component: {fileID: 1401775559028123791}
   m_Layer: 0
-  m_Name: Score Keeper
+  m_Name: ScoreKeeper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

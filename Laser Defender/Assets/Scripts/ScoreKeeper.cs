@@ -7,23 +7,22 @@ public class ScoreKeeper : MonoBehaviour
 {
     int currentScore;
 
-    public static ScoreKeeper instance;
+    static ScoreKeeper instance;
 
     void Awake()
     {
-        instance = this;
         ManageSingleton();
     }
 
     void ManageSingleton()
     {
-        int instanceCount = FindObjectsOfType(GetType()).Length;
-        if (instanceCount > 1)
+        if(instance != null)
         {
             gameObject.SetActive(false);
             Destroy(gameObject);
         } else
         {
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
     }
@@ -37,7 +36,6 @@ public class ScoreKeeper : MonoBehaviour
     {
         currentScore += value;
         Mathf.Clamp(currentScore, 0, int.MaxValue);
-        Debug.Log(currentScore);
     }
 
     public void ResetScore()
