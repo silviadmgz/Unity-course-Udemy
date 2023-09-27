@@ -30,7 +30,6 @@ public class LevelManager : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("Quitting game");
         Application.Quit();
     }
 
